@@ -49,7 +49,7 @@ public class AboutController {
         if(aboutService.existsByNameAbout(aboutDto.getNameAbout()))
             return new ResponseEntity(new Message("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         About about = new About(aboutDto.getNameAbout(), aboutDto.getLastNameAbout(),
-                  aboutDto.getEmailAbout(), aboutDto.getDescriptionAbout());
+                  aboutDto.getEmailAbout(), aboutDto.getDescriptionAbout(), aboutDto.getLinkedinAbout(), aboutDto.getGithubAbout());
         aboutService.save(about);
 
         return new ResponseEntity(new Message("Datos cargados"), HttpStatus.OK);
@@ -69,6 +69,8 @@ public class AboutController {
         about.setDescriptionAbout(aboutDto.getDescriptionAbout());
         about.setLastNameAbout(aboutDto.getLastNameAbout());
         about.setEmailAbout(aboutDto.getEmailAbout());
+        about.setLinkedinAbout(aboutDto.getLinkedinAbout());
+        about.setGithubAbout(aboutDto.getGithubAbout());
 
         aboutService.save(about);
         return new ResponseEntity(new Message("Datos actualizados"), HttpStatus.OK);

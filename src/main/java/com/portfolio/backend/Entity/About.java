@@ -24,8 +24,16 @@ public class About {
     @Size(min = 2, max = 30, message = "Surname must be between 2 and 30 characters")
     private String lastNameAbout;
     @NotNull
-    @Size(min = 2, max = 30, message = "Email must be between 2 and 30 characters")
+    @Size(min = 2, max = 255, message = "Email must be between 2 and 30 characters")
     private String emailAbout;
+
+    @NotNull
+    @Size(min = 1, max = 500)
+    private String linkedinAbout;
+
+    @NotNull
+    @Size(min = 1, max = 500)
+    private String githubAbout;
     @NotNull
     @Size(min = 1, max = 500, message = "Description must be between 1 and 500 characters")
     private String descriptionAbout;
@@ -33,11 +41,13 @@ public class About {
     public About() {
     }
 
-    public About(String nameAbout, String lastNameAbout, String emailAbout, String descriptionAbout) {
+    public About(String nameAbout, String lastNameAbout, String emailAbout, String descriptionAbout, String linkedinAbout, String githubAbout) {
         this.nameAbout = nameAbout;
         this.lastNameAbout = lastNameAbout;
         this.emailAbout = emailAbout;
         this.descriptionAbout = descriptionAbout;
+        this.linkedinAbout = linkedinAbout;
+        this.githubAbout = githubAbout;
     }
 
 

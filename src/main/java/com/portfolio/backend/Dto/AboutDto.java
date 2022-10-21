@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Getter @Setter
 public class AboutDto {
@@ -15,15 +17,23 @@ public class AboutDto {
     private String emailAbout;
     @NotBlank
     private String descriptionAbout;
+    @NotBlank
+    private String linkedinAbout;
+
+    @NotBlank
+    private String githubAbout;
+
 
     public AboutDto() {
     }
 
-    public AboutDto(@NotBlank String nameAbout, @NotBlank String lastNameAbout, @NotBlank String emailAbout, @NotBlank String descriptionAbout) {
+    public AboutDto (String nameAbout, String lastNameAbout, String emailAbout, String descriptionAbout, String linkedinAbout, String githubAbout) {
         this.nameAbout = nameAbout;
         this.lastNameAbout = lastNameAbout;
         this.emailAbout = emailAbout;
         this.descriptionAbout = descriptionAbout;
+        this.linkedinAbout = linkedinAbout;
+        this.githubAbout = githubAbout;
     }
 
 }
