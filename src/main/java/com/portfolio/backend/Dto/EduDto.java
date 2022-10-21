@@ -15,6 +15,7 @@ public class EduDto {
     @NotBlank
     private String dateEducation;
     @NotBlank
+    @Size(max = 255)
     private String imageEducation;
 
     public EduDto() {
