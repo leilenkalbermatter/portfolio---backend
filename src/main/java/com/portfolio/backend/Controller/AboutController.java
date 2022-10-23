@@ -14,8 +14,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/about")
-@CrossOrigin(origins = "https://leilenkalbermatter-portfolio.web.app")
-//@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "https://leilenkalbermatter-portfolio.web.app")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AboutController {
     @Autowired
     AboutService aboutService;
