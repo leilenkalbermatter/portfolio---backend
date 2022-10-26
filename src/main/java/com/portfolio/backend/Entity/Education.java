@@ -19,15 +19,20 @@ public class Education {
     private String descriptionEducation;
     private String dateEducation;
 
-    private String imageEducation;
+    private String pathImageEducation;
+
+    private String urlImageEducation;
+
+
 
     public Education() {
     }
 
-    public Education(String nameEducation, String descriptionEducation, String dateEducation, String imageEducation) {
+    public Education(String nameEducation, String descriptionEducation, String dateEducation, String pathImageEducation, String urlImageEducation) {
         this.nameEducation = nameEducation;
         this.descriptionEducation = descriptionEducation;
         this.dateEducation = dateEducation;
-        this.imageEducation = imageEducation;
+        this.pathImageEducation = pathImageEducation;
+        this.urlImageEducation = urlImageEducation;
     }
 }

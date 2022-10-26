@@ -49,7 +49,7 @@ public class EduController {
         if(eduService.existsByNameEducation(eduDto.getNameEducation()))
             return new ResponseEntity(new Message("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         Education education = new Education(eduDto.getNameEducation(),
-                eduDto.getDescriptionEducation(), eduDto.getDateEducation(), eduDto.getImageEducation());
+                eduDto.getDescriptionEducation(), eduDto.getDateEducation(), eduDto.getPathImageEducation(), eduDto.getUrlImageEducation());
         eduService.save(education);
 
         return new ResponseEntity(new Message("Datos cargados"), HttpStatus.OK);
@@ -68,7 +68,8 @@ public class EduController {
         education.setNameEducation(eduDto.getNameEducation());
         education.setDescriptionEducation(eduDto.getDescriptionEducation());
         education.setDateEducation(eduDto.getDateEducation());
-        education.setImageEducation(eduDto.getImageEducation());
+        education.setPathImageEducation(eduDto.getPathImageEducation());
+        education.setUrlImageEducation(eduDto.getUrlImageEducation());
 
         eduService.save(education);
         return new ResponseEntity(new Message("Datos actualizados"), HttpStatus.OK);

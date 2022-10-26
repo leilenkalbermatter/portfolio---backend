@@ -17,15 +17,20 @@ public class Experience {
     private String nameExperience;
     private String descriptionExperience;
     private String dateExperience;
-    private String imageExperience;
+    private String pathImageExperience;
+
+    private String urlImageExperience;
+
+
 
     public Experience() {
     }
 
-    public Experience(String nameExperience, String descriptionExperience, String dateExperience, String imageExperience) {
+    public Experience(String nameExperience, String descriptionExperience, String dateExperience, String pathImageExperience, String urlImageExperience) {
         this.nameExperience = nameExperience;
         this.descriptionExperience = descriptionExperience;
         this.dateExperience = dateExperience;
-        this.imageExperience = imageExperience;
+        this.pathImageExperience = pathImageExperience;
+        this.urlImageExperience = urlImageExperience;
     }
 }
