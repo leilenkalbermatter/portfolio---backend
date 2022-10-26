@@ -49,7 +49,7 @@ public class ExpController {
         if(expService.existsByNameExperience(expDto.getNameExperience()))
             return new ResponseEntity(new Message("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         Experience experience = new Experience(expDto.getNameExperience(),
-                expDto.getDescriptionExperience(), expDto.getDateExperience(), expDto.getImageExperience());
+                expDto.getDescriptionExperience(), expDto.getDateExperience(), expDto.getPathImageExperience(), expDto.getUrlImageExperience());
         expService.save(experience);
 
         return new ResponseEntity(new Message("Datos cargados"), HttpStatus.OK);
@@ -68,7 +68,8 @@ public class ExpController {
         experience.setNameExperience(expDto.getNameExperience());
         experience.setDescriptionExperience(expDto.getDescriptionExperience());
         experience.setDateExperience(expDto.getDateExperience());
-        experience.setImageExperience(expDto.getImageExperience());
+        experience.setPathImageExperience(expDto.getPathImageExperience());
+        experience.setUrlImageExperience(expDto.getUrlImageExperience());
 
         expService.save(experience);
         return new ResponseEntity(new Message("Datos actualizados"), HttpStatus.OK);

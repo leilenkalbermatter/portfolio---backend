@@ -14,16 +14,19 @@ public class ProDto {
     @NotBlank
     private String linkProject;
     @NotBlank
-    private String imageProject;
+    private String pathImageProject;
+    @NotBlank
+    private String urlImageProject;
 
     public ProDto() {
     }
 
-    public ProDto(String nameProject, String descriptionProject, String linkProject, String imageProject) {
+    public ProDto(String nameProject, String descriptionProject, String linkProject, String pathImageProject, String urlImageProject) {
         this.nameProject = nameProject;
         this.descriptionProject = descriptionProject;
         this.linkProject = linkProject;
-        this.imageProject = imageProject;
+        this.pathImageProject = pathImageProject;
+        this.urlImageProject = urlImageProject;
     }
 
 }

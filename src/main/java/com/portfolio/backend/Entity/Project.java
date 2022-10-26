@@ -17,15 +17,20 @@ public class Project {
     private String nameProject;
     private String descriptionProject;
     private String linkProject;
-    private String imageProject;
+    private String pathImageProject;
+
+    private String urlImageProject;
+
+
 
     public Project() {
     }
 
-    public Project(String nameProject, String descriptionProject, String linkProject, String imageProject) {
+    public Project(String nameProject, String descriptionProject, String linkProject, String pathImageProject, String urlImageProject) {
         this.nameProject = nameProject;
         this.descriptionProject = descriptionProject;
         this.linkProject = linkProject;
-        this.imageProject = imageProject;
+        this.pathImageProject = pathImageProject;
+        this.urlImageProject = urlImageProject;
     }
 }

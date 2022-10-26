@@ -49,7 +49,7 @@ public class ProController {
         if(proService.existsByNameProject(proDto.getNameProject()))
             return new ResponseEntity(new Message("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         Project project = new Project(proDto.getNameProject(),
-                proDto.getDescriptionProject(), proDto.getLinkProject(), proDto.getImageProject());
+                proDto.getDescriptionProject(), proDto.getLinkProject(), proDto.getPathImageProject(), proDto.getUrlImageProject());
         proService.save(project);
 
         return new ResponseEntity(new Message("Datos cargados"), HttpStatus.OK);
@@ -68,7 +68,8 @@ public class ProController {
         project.setNameProject(proDto.getNameProject());
         project.setDescriptionProject(proDto.getDescriptionProject());
         project.setLinkProject(proDto.getLinkProject());
-        project.setImageProject(proDto.getImageProject());
+        project.setPathImageProject(proDto.getPathImageProject());
+        project.setUrlImageProject(proDto.getUrlImageProject());
 
         proService.save(project);
         return new ResponseEntity(new Message("Datos actualizados"), HttpStatus.OK);

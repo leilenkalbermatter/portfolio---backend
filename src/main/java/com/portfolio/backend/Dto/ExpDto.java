@@ -14,16 +14,20 @@ public class ExpDto {
     @NotBlank
     private String dateExperience;
     @NotBlank
-    private String imageExperience;
+    private String pathImageExperience;
+
+    @NotBlank
+    private String urlImageExperience;
 
     public ExpDto() {
     }
 
-    public ExpDto(String nameExperience, String descriptionExperience, String dateExperience, String imageExperience) {
+    public ExpDto(String nameExperience, String descriptionExperience, String dateExperience, String pathImageExperience, String urlImageExperience) {
         this.nameExperience = nameExperience;
         this.descriptionExperience = descriptionExperience;
         this.dateExperience = dateExperience;
-        this.imageExperience = imageExperience;
+        this.pathImageExperience = pathImageExperience;
+        this.urlImageExperience = urlImageExperience;
     }
 
 }
