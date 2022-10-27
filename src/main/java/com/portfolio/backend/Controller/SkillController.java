@@ -58,8 +58,8 @@ public class SkillController {
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody SkillDto skillDto) {
         if (!skillService.existsById(id))
             return new ResponseEntity(new Message("No existe en la base de datos"), HttpStatus.NOT_FOUND);
-        if (skillService.existsByNameSkill(skillDto.getNameSkill()) && skillService.getOne(id).get().getNameSkill() != skillDto.getNameSkill())
-            return new ResponseEntity(new Message("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
+//        if (skillService.existsByNameSkill(skillDto.getNameSkill()) && skillService.getOne(id).get().getNameSkill() != skillDto.getNameSkill())
+//            return new ResponseEntity(new Message("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         if (StringUtils.isBlank(skillDto.getNameSkill()))
             return new ResponseEntity(new Message("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
 

@@ -59,8 +59,8 @@ public class EduController {
     public ResponseEntity<?>  update(@PathVariable("id") int id, @RequestBody EduDto eduDto){
         if(!eduService.existsById(id))
             return new ResponseEntity(new Message("No existe en la base de datos"), HttpStatus.NOT_FOUND);
-        if(eduService.existsByNameEducation(eduDto.getNameEducation()) && eduService.getOne(id).get().getNameEducation() != eduDto.getNameEducation())
-            return new ResponseEntity(new Message("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
+//        if(eduService.existsByNameEducation(eduDto.getNameEducation()) && eduService.getOne(id).get().getNameEducation() != eduDto.getNameEducation())
+//            return new ResponseEntity(new Message("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         if(StringUtils.isBlank(eduDto.getNameEducation()))
             return new ResponseEntity(new Message("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
 

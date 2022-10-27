@@ -59,8 +59,8 @@ public class ExpController {
     public ResponseEntity<?>  update(@PathVariable("id") int id, @RequestBody ExpDto expDto){
         if(!expService.existsById(id))
             return new ResponseEntity(new Message("No existe en la base de datos"), HttpStatus.NOT_FOUND);
-        if(expService.existsByNameExperience(expDto.getNameExperience()) && expService.getOne(id).get().getNameExperience() != expDto.getNameExperience())
-            return new ResponseEntity(new Message("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
+//        if(expService.existsByNameExperience(expDto.getNameExperience()) && expService.getOne(id).get().getNameExperience() != expDto.getNameExperience())
+//            return new ResponseEntity(new Message("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         if(StringUtils.isBlank(expDto.getNameExperience()))
             return new ResponseEntity(new Message("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
 

@@ -59,8 +59,8 @@ public class AboutController {
     public ResponseEntity<?>  update(@PathVariable("id") int id, @RequestBody AboutDto aboutDto){
         if(!aboutService.existsById(id))
             return new ResponseEntity(new Message("No existe en la base de datos"), HttpStatus.NOT_FOUND);
-        if(aboutService.existsByNameAbout(aboutDto.getNameAbout()) && aboutService.getOne(id).get().getNameAbout() != aboutDto.getNameAbout())
-            return new ResponseEntity(new Message("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
+//        if(aboutService.existsByNameAbout(aboutDto.getNameAbout()) && aboutService.getOne(id).get().getNameAbout() != aboutDto.getNameAbout())
+//            return new ResponseEntity(new Message("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         if(StringUtils.isBlank(aboutDto.getNameAbout()))
             return new ResponseEntity(new Message("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
 

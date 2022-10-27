@@ -59,8 +59,8 @@ public class ProController {
     public ResponseEntity<?>  update(@PathVariable("id") int id, @RequestBody ProDto proDto){
         if(!proService.existsById(id))
             return new ResponseEntity(new Message("No existe en la base de datos"), HttpStatus.NOT_FOUND);
-        if(proService.existsByNameProject(proDto.getNameProject()) && proService.getOne(id).get().getNameProject() != proDto.getNameProject())
-            return new ResponseEntity(new Message("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
+//        if(proService.existsByNameProject(proDto.getNameProject()) && proService.getOne(id).get().getNameProject() != proDto.getNameProject())
+//            return new ResponseEntity(new Message("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
         if(StringUtils.isBlank(proDto.getNameProject()))
             return new ResponseEntity(new Message("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
 
