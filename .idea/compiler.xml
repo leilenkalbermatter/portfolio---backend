@@ -9,7 +9,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="backend" />
         <module name="portfolio - backend" />
-        <module name="portfolio---backend" />
       </profile>
     </annotationProcessing>
   </component>
@@ -17,7 +16,6 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="backend" options="-parameters" />
       <module name="portfolio - backend" options="-parameters" />
-      <module name="portfolio---backend" options="-parameters" />
     </option>
   </component>
 </project>
