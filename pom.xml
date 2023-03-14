@@ -14,7 +14,7 @@
 	<name>backend</name>
 	<description>backend portfolio Leilen Kalbermatter</description>
 	<properties>
-		<java.version>18</java.version>
+		<java.version>19</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -34,7 +34,6 @@
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
