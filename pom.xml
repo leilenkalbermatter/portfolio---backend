@@ -15,6 +15,7 @@
 	<description>backend portfolio Leilen Kalbermatter</description>
 	<properties>
 		<java.version>18</java.version>
+		<start-class>com.portfolio.backend.BackendApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -83,6 +84,21 @@
 						</exclude>
 					</excludes>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.portfolio.backend.BackendApplication</mainClass>
+					<layout>JAR</layout>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
