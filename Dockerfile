@@ -1,4 +1,4 @@
 FROM amazoncorretto:18-alpine-jdk
 MAINTAINER leilenkalbermatter
-COPY out/artifacts/portfolio___backend_jar/portfolio---backend.jar portfolio---backend.jar
-ENTRYPOINT ["java","-jar","/portfolio---backend.jar"]
+COPY target/backend-0.0.1-SNAPSHOT.jar backend-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","backend-0.0.1-SNAPSHOT.jar"]
