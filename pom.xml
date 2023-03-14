@@ -15,7 +15,6 @@
 	<description>backend portfolio Leilen Kalbermatter</description>
 	<properties>
 		<java.version>19</java.version>
-		<start-class>com.portfolio.backend.BackendApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -30,7 +29,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -66,7 +69,7 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.12.0</version>
+			<version>3.1</version>
 		</dependency>
 
 	</dependencies>
@@ -83,16 +86,7 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
-					<mainClass>com.portfolio.backend.BackendApplication</mainClass>
-					<layout>JAR</layout>
 				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>

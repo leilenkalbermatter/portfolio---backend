@@ -34,7 +34,6 @@
 /home/leilenkalbermatter/Documentos/GitHub/portfolio---backend/src/main/java/com/portfolio/backend/Security/Dto/NewUser.java
 /home/leilenkalbermatter/Documentos/GitHub/portfolio---backend/src/main/java/com/portfolio/backend/Security/MainSecurity.java
 /home/leilenkalbermatter/Documentos/GitHub/portfolio---backend/src/main/java/com/portfolio/backend/Security/Service/UserDetailsServiceImpl.java
-/home/leilenkalbermatter/Documentos/GitHub/portfolio---backend/src/main/java/com/portfolio/backend/WebConfig.java
 /home/leilenkalbermatter/Documentos/GitHub/portfolio---backend/src/main/java/com/portfolio/backend/Dto/AboutDto.java
 /home/leilenkalbermatter/Documentos/GitHub/portfolio---backend/src/main/java/com/portfolio/backend/Controller/ExpController.java
 /home/leilenkalbermatter/Documentos/GitHub/portfolio---backend/src/main/java/com/portfolio/backend/Repository/ExpRepo.java
